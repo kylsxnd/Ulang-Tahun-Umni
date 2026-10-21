@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayang! ❤️</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffe6ea 0%, #fff0f3 50%, #fde2e4 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        .font-handwriting {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 40px rgba(255, 182, 193, 0.4);
+        }
+
+        /* Hati Beterbangan */
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            animation: floatUp linear forwards;
+            opacity: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-110vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        /* Layar (Screens) */
+        .screen {
+            display: none; /* Disembunyikan secara default */
+            min-height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            position: relative;
+            z-index: 10;
+        }
+        .screen.active {
+            display: flex;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efek Ayunan Polaroid */
+        @keyframes swing {
+            0% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+            100% { transform: rotate(-2deg); }
+        }
+        .polaroid-box {
+            background: white;
+            padding: 16px 16px 24px 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            transform-origin: top center;
+            animation: swing 4s ease-in-out infinite alternate;
+            transition: all 0.3s ease;
+        }
+        .polaroid-box:nth-child(even) { animation-duration: 3.5s; animation-delay: -1s; }
+        .polaroid-box:hover {
+            transform: scale(1.05) translateY(-5px) !important;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            animation-play-state: paused;
+            z-index: 50;
+        }
+
+        /* Jepitan Kayu */
+        .clothespin {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 35px;
+            background: #d4a373;
+            border-radius: 4px;
+            box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+            z-index: 20;
+        }
+        .clothespin::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: -2px;
+            width: 18px;
+            height: 2px;
+            background: #a37547;
+        }
+
+        /* Carousel Items Polaroid - DIPERBESAR */
+        .carousel-item-polaroid {
+            width: 300px;
+            margin: 0 15px;
+            flex-shrink: 0;
+        }
+        @media (min-width: 768px) {
+            .carousel-item-polaroid { 
+                width: 400px; /* Jauh lebih besar di PC */
+                margin: 0 25px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animasi Hati -->
+    <div id="hearts-bg" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- ==========================================
+         SCREEN 1: SURAT PANJANG
+         ========================================== -->
+    <div id="screen1" class="screen active">
+        <div class="glass-card w-full max-w-2xl rounded-3xl p-8 md:p-12 text-center relative">
+            <h1 class="font-handwriting text-5xl md:text-6xl text-pink-600 font-bold mb-6">Selamat Ulang Tahun Sayang (umniyyatul aulia syah) Semoga Bener yaa Namanya..🎂</h1>
+            
+            <div class="text-gray-700 leading-relaxed text-sm md:text-base space-y-4 text-justify md:text-center">
+                <!-- GANTI TEKS SURAT DISINI -->
+                <p>first of all selamat ulang tahunn sayang perlu aku pertegas dulu sebenernya aku bukan orang yang bisa romantis dll aku punya cara aku sendiri gimana caranya gitu lah yaa.. ini nanti baca baik baik yaaahh, selamat ulang tahun sayang yang keberapa 17?? masa iya 17 gamungkin 17 tambah 5 kali jadinya 21 intinya umur berapa aja mau 100 tahun berapa aja tetep sayang kokkkk</p>
+                <p>semoga di umur kamu yang nambah ini bener sih umurnya nambah tapi juga tua juga yaa udah bukan anak muda lagi ini udah kepala 2 aku pun juga udah jompoan kayaknya, semoga whistlist whislist kamu yang gapernah kamu kasih tau ke aku walaupun aku selalu minta kamu bilang ke aku apa aja yang kamu mau tapi belum tau sama sekali aku karena katanya kamu sendiri yang mau wujudin itu gapapa itu bener bener keren banget kalo kamu mau usahaa disituuu tapi kan aku juga mau usahain itu juga buat kamu sayangg.. intinya selamat ulang tahun yaa sayang semoga kamu sehat selalu banyak rezekinya temen temen kamu selalu ada sama kamu karena aku yakin mereka sesayang itu sama kamu dan aku pun juga sayang sama kamu.. temen temen kamu kaya semuanya aku gabisa sebutin nama mereka satupersatu tapi mereka udah baik banget sama kamu dan kamu juga orang baikk aku yakin kamu orang yang baik jadii semoga apapun kedepanya selalu di permudah yaa sayang jalanyaa.. doa terbaik selalu buat kamu intinya yaa. (kamu jangan ekspek aku bakal romantis yaa karena aku punay cara aku sendirii)</p>
+                <p>aku mau mentionn soal skripsii juga disini biar sekalian di baca aja yaa soalnya kalo nanti aku kirim yang di wa itu beda lagii sayang jadi sekarang aku mau mention ke kamu kalo kamu udah berusaha buat ngubah menajdi skripsi tapi dosen kamu mau kekeh kamu jurnal tapi aku yakin semua ini ada jalanyaa sayangg jadi kamu gausah takut bukan artinya aku gasayang sama kamu ga peduli sama kamu kalo aku bilang sama kamu jangan takutt bukann gada maksud begitu. maksud aku jangan takut hadepin aja semuanyaa selagi masih muda nangis nangis cape cape lelalh lelahh tapi kan ada aku aku juga pasti akan membantu kamu apapun itu aku akan berusaha mencoba paham karena di jurusan aku itu gada sinta sintaan dan aku lebih ke bagian komputer dan sebagainya tapi aku paham ko jangan remehin semua wawasan yang udah aku pelajari selama inii kampus aku bukan di gundar doang loh anak anakan aku juga ada yang dari kampus lain jadi kenalan aku banyak aku akan selalu membantu kamu jangan suka ovt tiap malem yaa sayang jangan sukaa nangis jangan suka ngejelekin diri sendiri (jangan terlalu keras sama diri kamu sendiri yaa. aku ngeliat kamu kadang suka keras sama diri kamu sendiri kamu juga butuh istirahat kamu gaharus selesain semuanya secara cepat.. bertahap aja aku yakin kamu bisa disetiap jalan kamu ada aku intinyaa kalo kamu noleh ke belakang ada aku yang siap bantu jadi jangan terlalu keras sama diri sendiri kamu juga manusia.. sayang sayangin diri kamu yang paling utama aku gamau kamu kenapa napaa bahkan bukan aku doang yang gamau temen kamu gamau juga mamah ayah juga gamau jadii diinget yaa sayang) <i>sekali lagi selamat ulang tahun yaa sayang (kamu hebat udah ngelewatin semuanya sampe sekarang tinggal 1 tahap lagi SKRIPSI semangatt!!)</i> aku emang ga seromantis cowo lain tapi ini cara aku (terimakasih udah membaca)</p>
+            </div>
+            
+            <button onclick="goToScreen(2)" class="mt-8 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 mx-auto">
+                Lihat Memori Kita <span class="text-xl">👉</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         SCREEN 2: GALERI POLAROID SAJA (DIPERBESAR & DITENGAHKAN)
+         ========================================== -->
+    <!-- Dihilangkan class 'justify-start pt-12 md:pt-20' agar pas di tengah layar -->
+    <div id="screen2" class="screen">
+        
+        <!-- Header Judul -->
+        <div class="w-full max-w-5xl mx-auto text-center mb-10 mt-4">
+            <h2 class="font-handwriting text-5xl md:text-6xl text-pink-600 font-bold">Foto Foto Kamu</h2>
+            <p class="text-gray-600 mt-2 text-sm md:text-lg px-4">Jujur ini foto foto ini yang paling memorable aja di aku yaa. (sebenernya banyak foto foto yang mau aku masukin cuman segini aja yaaa sisanya semuanya memorable selalu buat aku tenang aja sayangg)</p>
+        </div>
+
+        <!-- CAROUSEL POLAROID -->
+        <div class="relative w-full max-w-7xl mx-auto flex items-center justify-center mb-8">
+            <div class="absolute top-[40px] left-0 w-full h-[3px] bg-[#d4a373] z-0 rounded-full shadow-sm"></div>
+            
+            <!-- Tombol Kiri Polaroid -->
+            <button onclick="slideLeft('track-polaroid')" class="absolute left-2 md:left-4 z-50 bg-white/80 text-pink-500 w-14 h-14 rounded-full shadow-md flex items-center justify-center text-3xl hover:scale-110 border border-pink-100 backdrop-blur-sm">◀</button>
+
+            <!-- Viewport Polaroid -->
+            <div class="overflow-hidden w-full py-10 px-4 flex items-start">
+                <div id="track-polaroid" class="flex transition-transform duration-500 ease-in-out">
+                    
+                    <!-- POLAROID 1 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <!-- Foto dibuat aspect-square agar kerasa bentuk polaroidnya -->
+                            <img src="FOTO1.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">awal awal mau di ghosting 3 bulan</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">enga tau kapan ini tanggalnya. maaf ya sayang</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    warkop awal perkenalan ini keren banget dah umni, ngegodain anak teknik yang seganteng ini keren sih.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 2 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO2.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">awal jadian</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">24 Desember 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    ini sih waktu itu jadianya harus di ceramahin dulu sih, big thanks sama apiw afifah rachman udah bilangin ke dia ini ke umni jangan ngegantungin anak orang makasih apiw
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 3 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO3.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">Jalan Ke Blok M Pertama Kali</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">2 Januari 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    ini sih pertama kali ngedate harusnya yang aku bawa kamera terus aku ajakin makan ayam melawai yang ada jukutnya itu yang kesukaan aku, makasih udah mau nurutin aku makan ayam melawai yang super enak itu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 4 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO4.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">Timezone pertama ini kayaknya</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">19 Mei 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    gatau ini timzone mana atau apa gatau intinya taman bermain lah, pertama kali ini main timezone kayaknya (kalo gabisa basket gausah ngajak timezone ya sayang .. jujur bercanda)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 5 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO5.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">SEMPROOOOOOOOO</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">10 Juli 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    ini keren banget keren keren banget aku kayaknya kalo jadi kamu gabisa deh sempro secepet ini (tapi boong) kamu keren banget bisa nyelesain sempro yang kamu kadang burnout ngomel ke aku main sama fay buat ringanin pikiran main sama apiw.. liat sekarang kamu udah selesai semproo kan sisa skripsi dikit lagi jadi ayoo lanjutin yaa kamu selalu punya temen temen terbaik kamu aku gabisa sebtuin satu persatu temen kamu tapi yang selalu kamu panggil namanya Fay sama Apiw.. makasih apiw sama fay..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- POLAROID 6 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO6.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">Photobooth memorable aku</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">30 Maret 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    sebenernya ini memorable karena aku nya ganteng aja keren aja gitu tapi kamunya juga cantik jadi ini foto yang paling aku suka tapi sayangnya kamu enga jadi yaudahhh
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 7 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO7.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">Jangan nangis malem lagi yaa</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">24 September 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    sebenernya aku gapunya banyak foto foto kamu tiap nangis sih tapi alesan kamu nangis kan banyak yaa sayang jadi ini mungkin pake foto ini aja tapi sekarang tiap malem gaboleh nangis lagi ovt lagi dll burnout dll sekarang ada aku dulu kamu mainya sama apiw terus sama fay terus 2 orang itu yang dulu nemenin kamu sekarang nambah aku nah jadi gaboleh nangis nangis lagi yaa, aku bukan orang yang gabisa di andelin kok aku bisa banget kamu andelin buat kedepanya tapi tolong juga udah nambah umur harus nurutt yaa kalo diajak ngomong serius jangan nyeleneh lagii paham yaa udah gedee okaii sayangg.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POLAROID 8 -->
+                    <div class="carousel-item-polaroid">
+                        <div class="polaroid-box">
+                            <div class="clothespin"></div>
+                            <img src="FOTO8.jpeg" class="w-full aspect-square object-cover rounded-sm">
+                            <div class="mt-4">
+                                <h3 class="font-handwriting text-2xl md:text-3xl text-gray-800 text-center font-bold">Makan ramen jepang</h3>
+                                <p class="text-xs md:text-sm text-gray-400 text-center mt-1">19 September 2026</p>
+                                <p class="text-sm text-gray-600 mt-3 text-justify leading-relaxed">
+                                    gatau kenapa aku milih foto ini karena ya AIB kamu tuh sebenenrya lucu lucu aja gitu loh jadii yaa sayang aku suka aja.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tombol Kanan Polaroid -->
+            <button onclick="slideRight('track-polaroid')" class="absolute right-2 md:right-4 z-50 bg-white/80 text-pink-500 w-14 h-14 rounded-full shadow-md flex items-center justify-center text-3xl hover:scale-110 border border-pink-100 backdrop-blur-sm">▶</button>
+        </div>
+
+        <!-- Tombol Lanjut ke Screen 3 (Posisinya disesuaikan) -->
+        <div class="mt-6 text-center w-full">
+            <button onclick="goToScreen(3)" class="bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-semibold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 mx-auto text-lg">
+                Ada Satu Lagi Nih! <span class="text-2xl">👉</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         SCREEN 3: PERMINTAAN HADIAH
+         ========================================== -->
+    <div id="screen3" class="screen">
+        <div class="glass-card w-full max-w-lg rounded-3xl p-8 md:p-12 text-center relative mx-auto">
+            <div class="absolute -top-6 -left-4 text-6xl rotate-12">🎁</div>
+            
+            <h2 class="font-handwriting text-4xl md:text-5xl text-pink-600 font-bold mb-4">Make a Wish! 🪄</h2>
+            <p class="text-gray-700 mb-8 text-sm md:text-base">kalo cuman ucapan doang kayaknya semua orang bisaa, aku minta tolong kasih beberapa wishlist kamu ke aku kita wujudin bareng bareng dan kamu lagi mau apa.. aku gamau yaa kalo kamu jawabnya mau aku .. kalo mau aku mah kamu kan udah dapet aku tapi hal apa yang kamu mau kalo kamu ga ketik dan ga kirim ke aku dalam 24 jam jujur marah .. kirim aja nanti masuk ke email aku yaaaa</p>
+            
+            <div class="w-full mb-4">
+                <!-- Input KOSONG -->
+                <input type="text" id="giftInput" value="" placeholder="" class="w-full px-5 py-4 rounded-xl border-2 border-pink-200 focus:outline-none focus:border-pink-400 focus:ring-4 focus:ring-pink-100 text-gray-700 bg-white shadow-inner text-center text-lg" autocomplete="off">
+                
+                <!-- Peringatan Lucu -->
+                <p id="giftWarning" class="text-red-500 text-sm mt-3 font-medium hidden">
+                    Isi dulu dong cantikk... 🥺
+                </p>
+            </div>
+            
+            <button onclick="sendMail()" class="w-full mt-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg tracking-wide flex items-center justify-center gap-2">
+                Kirim 💌
+            </button>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT LOGIC
+         ========================================== -->
+    <script>
+        // 1. Animasi Hati Background
+        const heartsContainer = document.getElementById('hearts-bg');
+        const emojis = ['❤️', '💖', '💕', '🌸', '✨'];
+
+        function createBackgroundHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            heart.style.left = Math.random() * 90 + 5 + 'vw';
+            heart.style.fontSize = (Math.random() * 1.5 + 0.8) + 'rem';
+            heart.style.animationDuration = (Math.random() * 5 + 6) + 's';
+            heartsContainer.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 11000);
+        }
+        setInterval(createBackgroundHeart, 900);
+
+        // 2. Navigasi Antar Layar
+        function goToScreen(screenNumber) {
+            document.querySelectorAll('.screen').forEach(el => {
+                el.classList.remove('active');
+            });
+            const targetScreen = document.getElementById('screen' + screenNumber);
+            targetScreen.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll ke atas saat ganti layar
+        }
+
+        // 3. Fungsi Carousel Polaroid
+        function getSlideDistance(track) {
+            const firstItem = track.children[0];
+            const secondItem = track.children[1];
+            if (firstItem && secondItem) {
+                return secondItem.getBoundingClientRect().left - firstItem.getBoundingClientRect().left;
+            }
+            return 300;
+        }
+
+        function slideRight(trackId) {
+            const track = document.getElementById(trackId);
+            if (track.dataset.animating === 'true') return;
+            track.dataset.animating = 'true';
+            
+            const dist = getSlideDistance(track);
+            track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            track.style.transform = `translateX(-${dist}px)`;
+            
+            setTimeout(() => {
+                track.style.transition = 'none';
+                track.style.transform = 'translateX(0)';
+                track.appendChild(track.children[0]);
+                track.dataset.animating = 'false';
+            }, 500);
+        }
+
+        function slideLeft(trackId) {
+            const track = document.getElementById(trackId);
+            if (track.dataset.animating === 'true') return;
+            track.dataset.animating = 'true';
+            
+            const dist = getSlideDistance(track);
+            
+            // Pindah anak terakhir ke depan
+            track.insertBefore(track.lastElementChild, track.firstElementChild);
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${dist}px)`;
+            
+            // Force browser reflow
+            track.offsetHeight; 
+            
+            track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            track.style.transform = 'translateX(0)';
+            
+            setTimeout(() => {
+                track.style.transition = 'none';
+                track.dataset.animating = 'false';
+            }, 500);
+        }
+
+        // 4. Submit Form Hadiah (Email)
+        function sendMail() {
+            const inputField = document.getElementById('giftInput');
+            const warningText = document.getElementById('giftWarning');
+            const giftValue = inputField.value.trim();
+
+            if (giftValue === "") {
+                warningText.classList.remove('hidden');
+                inputField.classList.add('animate-pulse');
+                inputField.style.borderColor = "#ef4444"; // Merah
+                setTimeout(() => {
+                    inputField.classList.remove('animate-pulse');
+                    inputField.style.borderColor = ""; // Reset
+                }, 1000);
+            } else {
+                warningText.classList.add('hidden');
+                
+                // --- GANTI EMAIL INI ---
+                const targetEmail = "fauzanhariyono280705@gmail.com"; 
+                // -----------------------
+                
+                const subject = encodeURIComponent("Hadiah Ulang Tahun dari Ayang!");
+                const body = encodeURIComponent(`Halo sayang!\n\nDi ulang tahunku ini, aku mau minta tolong wujudin wishlist aku ini yaa: \n\n✨ "${giftValue}" ✨\n\nMakasih yaa! I love you! ❤️`);
+                
+                window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+            }
+        }
+    </script>
+</body>
+</html>
